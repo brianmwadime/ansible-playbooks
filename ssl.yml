@@ -10,6 +10,7 @@
   remote_user: epicbrokers
   vars:
     - update_apt_cache: yes
+    - owner_email: owner_email_here
   vars_files:
     - env_vars/base.yml
 
