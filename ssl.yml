@@ -1,0 +1,17 @@
+---
+
+- name: Initial configuration for {{ application_name }} SSL
+  hosts: esp
+  # sudo: yes
+  # sudo_user: epicbrokers
+  become: yes
+  # become_method: sudo
+  # become_user: root
+  remote_user: epicbrokers
+  vars:
+    - update_apt_cache: yes
+  vars_files:
+    - env_vars/base.yml
+
+  roles:
+    - certbot
